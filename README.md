@@ -60,16 +60,40 @@ You will also need to set CORS-settings for your sanity.io app
 
 Write some code to display the data (or copy the code from the lab instructions)
 
+# 2.3 (Optional but cool) Install tailwind-css
+
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init tailwind.config.cjs -p
+```
+
+Configure template paths:
+
+```
+content: ['./src/**/*.{html,js,svelte,ts}'],
+```
+
+Create a layout-page which imports the css
+
+```
+touch ./src/routes/+layout.svelte
+```
+
 # 3. Vercel
 
 Vercel is a hosting site for frontend apps. This is where we will host our SvelteKit app.
 
 ## 3.1 Push code to github
 
-The easiest way to deploy with vercel is via github. Push your code to a github repo
+The easiest way to deploy with vercel is via github. Push your code to a github repo.
+Create a github repo on github.com and the run the following:
 
 ```
-git init
+git init -b main
+git add .
+git commit -a -m "Initial commit"
+git remote add origin https://github.com/YOUR-ACCOUNT/YOUR-REPO.git
+git push -u origin main
 ```
 
 ## 3.2 Log in to vercel
