@@ -35,7 +35,7 @@ Add some cool content from the studio and publish it. It should now be available
 
 # 2. SvelteKit
 
-# 2.1 Setup a SvelteKit starter project
+## 2.1 Setup a SvelteKit starter project
 
 Svelte is the greatest framework in the world for building javascript components, and SvelteKit is the app framework for building Svelte apps. It is to Svelte what Next is to React.
 
@@ -48,13 +48,13 @@ npm install
 npm run dev
 ```
 
-# 2.2 Install sanity dependencies
+## 2.2 Install sanity dependencies
 
 ```
 npm i @sanity/client
 ```
 
-# 2.3 Create a +page.ts file to load data
+## 2.3 Create a +page.ts file to load data
 
 In Svelte a route can be accompanied by a load file that provides data for the components in the route. The load-file is named +page.ts. Write some code to fetch data from our sanity project (or copy the code from the lab instructions /sveltekit-files/+page.svelte)
 
@@ -63,7 +63,7 @@ You will need to provide credentials for your sanity.io app which can be found a
 You will also need to set CORS-settings for your sanity.io app
 Go to sanity.io/manage and find CORS-settings under the API-heading
 
-# 2.4 Write Svelte-components
+## 2.4 Write Svelte-components
 
 A suggested project structure is to create components for Conference, Days, Talks and Speakers. It is also good to have a types-file in the lib-directory. The types should mirror the types you created in Sanity-studio.
 
@@ -87,7 +87,7 @@ src
 
 ```
 
-# 2.5 (Optional but cool) Install tailwind-css
+## 2.5 (Optional but cool) Install tailwind-css
 
 ```
 npm install -D tailwindcss postcss autoprefixer
