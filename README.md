@@ -39,6 +39,8 @@ Add some cool content from the studio and publish it. It should now be available
 
 Svelte is the greatest framework in the world for building javascript components, and SvelteKit is the app framework for building Svelte apps. It is to Svelte what Next is to React.
 
+Make sure you choose to create a typescript SvelteKit-app. Typescript is the best.
+
 ```
 npm create svelte@latest op-kompdag
 cd op-kompdag
@@ -52,22 +54,47 @@ npm run dev
 npm i @sanity/client
 ```
 
-Write some code to fetch data from our sanity project (or copy the code from the lab instructions)
+# 2.3 Create a +page.ts file to load data
+
+In Svelte a route can be accompanied by a load file that provides data for the components in the route. The load-file is named +page.ts. Write some code to fetch data from our sanity project (or copy the code from the lab instructions /sveltekit-files/+page.svelte)
 
 You will need to provide credentials for your sanity.io app which can be found at sanity.io/manage
 
 You will also need to set CORS-settings for your sanity.io app
+Go to sanity.io/manage and find CORS-settings under the API-heading
 
-Write some code to display the data (or copy the code from the lab instructions)
+# 2.4 Write Svelte-components
 
-# 2.3 (Optional but cool) Install tailwind-css
+A suggested project structure is to create components for Conference, Days, Talks and Speakers. It is also good to have a types-file in the lib-directory. The types should mirror the types you created in Sanity-studio.
+
+Your project structure could then look like this:
+
+```
+src
+├── app.css
+├── app.html
+├── lib
+│   └── types.ts
+└── routes
+    ├── +layout.svelte
+    └── [slug]
+        ├── +page.svelte
+        ├── +page.ts
+        ├── Conference.svelte
+        ├── Days.svelte
+        ├── Speakers.svelte
+        └── Talks.svelte
+
+```
+
+# 2.5 (Optional but cool) Install tailwind-css
 
 ```
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init tailwind.config.cjs -p
 ```
 
-Configure template paths:
+Configure template paths in tailwind.content.cjs:
 
 ```
 content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -103,3 +130,9 @@ Got to vercel.com and sign in with your github account. Create a new project and
 Press Deploy.
 
 Done.
+
+# 4. Further labs
+
+## 4.1 Deploy the Sanity studio to Vercel
+
+Try deploying Sanity studio to Vercel
