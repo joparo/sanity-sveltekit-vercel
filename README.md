@@ -136,3 +136,15 @@ Done.
 ## 4.1 Deploy the Sanity studio to Vercel
 
 Try deploying Sanity studio to Vercel
+
+## 4.2 Add auth to Sanity
+
+Explore options of protecting the Sanity data
+
+## 4.3 Explore injection vectors in GROQ-queries
+
+We use data from the query-string in the example GROQ-query. Can this be exploited?
+
+## 4.4 Expand the conference site
+
+Expand the conference site to use a landing page which lists all available conferences
