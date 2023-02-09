@@ -4,7 +4,7 @@ import type { Conference } from '$lib/types';
 import type { PageLoad } from './$types';
 
 const client = sanityClient({
-	projectId: 'pzc72vti',
+	projectId: 'XXXXXXXX',
 	dataset: 'production',
 	apiVersion: '2023-01-30',
 	useCdn: false
