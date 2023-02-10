@@ -22,6 +22,7 @@ npm create sanity@latest
 ## 1.2 Create schemas
 
 Copy the schema-files for conference, speaker, days and talk from the lab-instructions
+
 Update index.ts with the new schemas
 
 ## 1.3 Start the Sanity studio locally
