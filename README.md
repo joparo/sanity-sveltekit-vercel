@@ -56,40 +56,53 @@ npm run dev
 npm i @sanity/client
 ```
 
-## 2.3 Create a +page.ts file to load data
+## 2.3 Setup project route structure
 
-In Svelte a route can be accompanied by a load file that provides data for the components in the route. The load-file is named +page.ts. Write some code to fetch data from our sanity project (or copy the code from the lab instructions /sveltekit-files/+page.svelte)
+SvelteKit uses file based routing, which means every folder will resolve to a route in your app. The Svelte-component that is loaded in each route is defined in a file called +page.svelte.
+
+Create a +page.svelte file directly in your route-folder. This will be your sites landing page.
+
+Create a folder called conference/[slug] - this will be the route to a specific conference. Inside this folder, create a file called +page.svelte.
+
+## 2.4 Create a +page.ts file to load data
+
+In SvelteKit a route can be accompanied by a load file that provides data for the components in the route. The load-file is named +page.ts. Write some code to fetch data from our sanity project (or copy the code from the lab instructions /sveltekit-files/+page.svelte)
+
+Create typescript types in a types-file in the lib-directory. The types should mirror the types you query for in the +page.ts-file which in turn mirrors the types in Sanity-studio.
 
 You will need to provide credentials for your sanity.io app which can be found at sanity.io/manage
 
 You will also need to set CORS-settings for your sanity.io app
 Go to sanity.io/manage and find CORS-settings under the API-heading
 
-## 2.4 Write Svelte-components
+## 2.5 Write Svelte-components
 
-A suggested project structure is to create components for Conference, Days, Talks and Speakers. It is also good to have a types-file in the lib-directory. The types should mirror the types you created in Sanity-studio.
+A suggested project structure is to create components for Conference, Days, Talks and Speakers.
 
 Your project structure could then look like this:
 
 ```
 src
 ├── app.css
+├── app.d.ts
 ├── app.html
 ├── lib
 │   └── types.ts
 └── routes
     ├── +layout.svelte
-    └── [slug]
-        ├── +page.svelte
-        ├── +page.ts
-        ├── Conference.svelte
-        ├── Days.svelte
-        ├── Speakers.svelte
-        └── Talks.svelte
+    ├── +page.svelte
+    └── conference
+        └── [slug]
+            ├── +page.svelte
+            ├── +page.ts
+            ├── Conference.svelte
+            ├── Days.svelte
+            ├── Speakers.svelte
+            └── Talks.svelte
 
 ```
 
-## 2.5 (Optional but cool) Install tailwind-css
+## 2.6 (Optional but cool) Install tailwind-css
 
 ```
 npm install -D tailwindcss postcss autoprefixer
@@ -102,11 +115,9 @@ Configure template paths in tailwind.content.cjs:
 content: ['./src/**/*.{html,js,svelte,ts}'],
 ```
 
-Create a +layout-page which imports the css
+Create a +layout-page which imports the css (see example file in /tailwind-css/+layout.svelte).
 
-Add tailwind directives to a file called app.css in root
-
-See example files in the lab instructions
+Create a app.css file in the src-folder. Add tailwind directives to this file. (see example file in /tailwind-css/app.css)
 
 # 3. Vercel
 
