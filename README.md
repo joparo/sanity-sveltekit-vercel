@@ -23,6 +23,8 @@ npm create sanity@latest
 
 Copy the schema-files for conference, speaker, days and talk from the lab-instructions
 
+Update index.ts with the new schemas
+
 ## 1.3 Start the Sanity studio locally
 
 Sanity studio is a react app where we can create content using the schemas we have setup
@@ -139,4 +141,12 @@ Try deploying Sanity studio to Vercel
 
 ## 4.2 Add auth to Sanity
 
-The Sanity API is public. Try making it authenticated
+Explore options of protecting the Sanity data
+
+## 4.3 Explore injection vectors in GROQ-queries
+
+We use data from the query-string in the example GROQ-query. Can this be exploited?
+
+## 4.4 Expand the conference site
+
+Expand the conference site to use a landing page which lists all available conferences
