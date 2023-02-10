@@ -136,3 +136,7 @@ Done.
 ## 4.1 Deploy the Sanity studio to Vercel
 
 Try deploying Sanity studio to Vercel
+
+## 4.2 Add auth to Sanity
+
+The Sanity API is public. Try making it authenticated
