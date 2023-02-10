@@ -100,11 +100,11 @@ Configure template paths in tailwind.content.cjs:
 content: ['./src/**/*.{html,js,svelte,ts}'],
 ```
 
-Create a layout-page which imports the css
+Create a +layout-page which imports the css
 
-```
-touch ./src/routes/+layout.svelte
-```
+Add tailwind directives to a file called app.css in root
+
+See example files in the lab instructions
 
 # 3. Vercel
 
